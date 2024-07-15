@@ -1,0 +1,7 @@
+{
+    "al.codeAnalyzers": ["${CodeCop}"],
+    "al.enableCodeAnalysis": true,
+    "al.backgroundCodeAnalysis": "Project",
+    "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectType>.al",
+    "CRS.OnSaveAlFileAction": "Rename"
+}
