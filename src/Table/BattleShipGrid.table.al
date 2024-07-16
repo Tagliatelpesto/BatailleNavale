@@ -36,6 +36,21 @@ table 50103 "BattleShip Grid"
             Clustered = true;
         }
     }
+    procedure CreateGrid()
+    var
+        k: Integer;
+    begin
+        if not Rec.IsTemporary() then
+            Error('%1 must be temporary', Rec.TableCaption);
+        Rec.Reset();
+        Rec.DeleteAll();
+        for k := 1 to 10 do begin
+            Rec.Init();
+            Rec.Line := k;
+            Rec.Insert();
+        end;
+    end;
+
     procedure InsertBoat(NoGame_p: Code[20]; Player_p: Text[50]; Line_p: Integer; Column_p: Integer; BoatType_p: Enum "Boat Type"; BoatStatut_p: Enum "Boat Statut")
     var
         NewBoat: Record "BattleShip Grid";
@@ -52,18 +67,5 @@ table 50103 "BattleShip Grid"
         end
     end;
 
-    procedure CreateGrid(OriginGame_p: Record "BattleShip Game")
-    var
-        k: Integer;
-    begin
-        if not Rec.IsTemporary() then
-            Error('%1 must be temporary', Rec.TableCaption);
-        Rec.Reset();
-        Rec.DeleteAll();
-        for k := 1 to 10 do begin
-            Rec.Init();
-            Rec.Line := k;
-            Rec.Insert();
-        end;
-    end;
+
 }

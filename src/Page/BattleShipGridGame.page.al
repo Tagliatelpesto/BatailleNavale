@@ -153,50 +153,14 @@ page 50104 "BattleShip Grid Game"
         RecGame_g := RecGame_p;
         Player_g := Player_p;
         Opponent_g := Opponent_p;
-        Rec.CreateGrid(RecGame_p);
+        Rec.CreateGrid();
         CurrPage.Update(false);
     end;
 
     //Show the different ships and their status in the Grid.
     procedure SetGrid()
-    var
-        BattleGrid_l: Record "BattleShip Grid";
-        Column_p: Integer;
-        BoatStatut_l: Code[1];
-        BoatColor_l: Text[15];
     begin
-        a := '';
-        b := '';
-        c := '';
-        d := '';
-        e := '';
-        f := '';
-        g := '';
-        h := '';
-        i := '';
-        j := '';
-
-        for Column_p := 1 to 10 do
-            if (BattleGrid_l.Get(RecGame_g."No.", Opponent_g, Rec.Line, Column_p)) then begin
-                if (BattleGrid_l."Boat Statut" = "Boat Statut"::" ") then begin
-                    BoatStatut_l := '';
-                    BoatColor_l := '';
-                end;
-                if (BattleGrid_l."Boat Statut" = "Boat Statut"::Miss) then begin
-                    BoatStatut_l := 'O';
-                    BoatColor_l := 'Subordinate';
-                end;
-                if (BattleGrid_l."Boat Statut" = "Boat Statut"::Hit) then begin
-                    BoatStatut_l := 'X';
-                    BoatColor_l := 'Attention';
-                end;
-                if (BattleGrid_l."Boat Statut" = "Boat Statut"::Sinking) then begin
-                    BoatStatut_l := 'X';
-                    BoatColor_l := 'Strong';
-                end;
-
-                SetStatutAndColorOfBoat(Column_p, BoatStatut_l, BoatColor_l);
-            end;
+        CreateGridMgt.AssignValuesToColumn(RecGame_g."No.", Opponent_g, Rec.Line, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
     end;
 
     procedure OnValidateChoice(Line_p: Integer; Column_p: Integer)
@@ -347,6 +311,7 @@ page 50104 "BattleShip Grid Game"
 
     var
         RecGame_g: Record "BattleShip Game";
+        CreateGridMgt: CodeUnit "CreateGrid";
         Player_g: Text[50];
         Opponent_g: Text[50];
         a: code[1];

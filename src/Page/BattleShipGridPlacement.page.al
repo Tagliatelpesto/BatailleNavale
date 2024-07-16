@@ -237,7 +237,7 @@ page 50105 "BattleShip Grid Placement"
     begin
         RecGame_g := RecGame_p;
         Player_g := Player_p;
-        Rec.CreateGrid(RecGame_p);
+        Rec.CreateGrid();
         CurrPage.Update(false);
     end;
 
@@ -268,7 +268,6 @@ page 50105 "BattleShip Grid Placement"
         end
         else
             Rec.InsertBoat(RecGame_g."No.", Player_g, Line_p, Column_p, BoatType_p, BoatStatut_p);
-
     end;
 
     procedure DeleteBoat(Line_p: Integer; Column_p: Integer; BoatType_p: Enum "Boat Type")
@@ -362,6 +361,7 @@ page 50105 "BattleShip Grid Placement"
 
     var
         RecGame_g: Record "BattleShip Game";
+        CreateGridMgt: CodeUnit "CreateGrid";
         Player_g: Text[50];
         a: enum "Boat Type";
         b: enum "Boat Type";
