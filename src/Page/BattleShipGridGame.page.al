@@ -145,7 +145,8 @@ page 50104 "BattleShip Grid Game"
     }
     trigger OnAfterGetRecord()
     begin
-        SetGrid();
+        //Show the different ships and their status in the Grid.
+        CreateGridMgt.GameGridAssignValuesToColumn(RecGame_g."No.", Opponent_g, Rec.Line, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
     end;
 
     procedure CreateGrid(RecGame_p: Record "BattleShip Game"; Player_p: Text[50]; Opponent_p: Text[50])
@@ -155,12 +156,6 @@ page 50104 "BattleShip Grid Game"
         Opponent_g := Opponent_p;
         Rec.CreateGrid();
         CurrPage.Update(false);
-    end;
-
-    //Show the different ships and their status in the Grid.
-    procedure SetGrid()
-    begin
-        CreateGridMgt.AssignValuesToColumn(RecGame_g."No.", Opponent_g, Rec.Line, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
     end;
 
     procedure OnValidateChoice(Line_p: Integer; Column_p: Integer)

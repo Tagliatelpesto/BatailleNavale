@@ -4,6 +4,7 @@ report 50100 "Resume Print BattleShip Game"
     Caption = 'Resume Print BattleShip Game';
     UsageCategory = Documents;
     RDLCLayout = 'src/RDLC/PrintResumeBattleShipGame.rdlc';
+    UseRequestPage = false;
     dataset
     {
         dataitem(BattleShipGame; "BattleShip Game")
@@ -30,27 +31,26 @@ report 50100 "Resume Print BattleShip Game"
             column(Player2; "Player 2")
             {
             }
-            column(PostingDate; "Posting Date")
+            column(PostingDate; format("Posting Date", 0, '<Day,2>/<Month,2>/<Year4>'))
             {
             }
             column(Winner; Winner)
             {
             }
-
-            dataitem(BattleGridP1; Integer)
+            dataitem(BattleGridPlacementP1; Integer)
             {
                 DataItemTableView = sorting(Number);
-                column(LineP1; BattleGridP1.Number) { }
-                column(aPlacementP1; a) { }
-                column(bPlacementP1; b) { }
-                column(cPlacementP1; c) { }
-                column(dPlacementP1; d) { }
-                column(ePlacementP1; e) { }
-                column(fPlacementP1; f) { }
-                column(gPlacementP1; g) { }
-                column(hPlacementP1; h) { }
-                column(iPlacementP1; i) { }
-                column(jPlacementP1; j) { }
+                column(LinePlacementP1; BattleGridPlacementP1.Number) { }
+                column(aPlacementP1; a1) { }
+                column(bPlacementP1; b1) { }
+                column(cPlacementP1; c1) { }
+                column(dPlacementP1; d1) { }
+                column(ePlacementP1; e1) { }
+                column(fPlacementP1; f1) { }
+                column(gPlacementP1; g1) { }
+                column(hPlacementP1; h1) { }
+                column(iPlacementP1; i1) { }
+                column(jPlacementP1; j1) { }
                 column(BoatColorAPlacementP1; BoatColorA) { }
                 column(BoatColorBPlacementP1; BoatColorB) { }
                 column(BoatColorCPlacementP1; BoatColorC) { }
@@ -64,28 +64,29 @@ report 50100 "Resume Print BattleShip Game"
 
                 trigger OnPreDataItem()
                 begin
-                    BattleGridP1.SetRange(Number, 1, TempGridGameP1_g.Count());
+                    BattleGridPlacementP1.SetRange(Number, 1, TempGridPlacementP1_g.Count());
                 end;
 
                 trigger OnAfterGetRecord()
                 begin
-                    TempGridGameP1_g.Get('', '', BattleGridP1.Number, 0);
-                    GridMgt_g.AssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 2", Number, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+                    TempGridPlacementP1_g.Get('', '', BattleGridPlacementP1.Number, 0);
+                    GridMgt_g.PlacementGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 1", Number, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
                 end;
             }
-            dataitem(BattleGridP2; Integer)
+            dataitem(BattleGridPlacementP2; Integer)
             {
-                column(LineP2; BattleGridP2.Number) { }
-                column(aPlacementP2; a) { }
-                column(bPlacementP2; b) { }
-                column(cPlacementP2; c) { }
-                column(dPlacementP2; d) { }
-                column(ePlacementP2; e) { }
-                column(fPlacementP2; f) { }
-                column(gPlacementP2; g) { }
-                column(hPlacementP2; h) { }
-                column(iPlacementP2; i) { }
-                column(jPlacementP2; j) { }
+                DataItemTableView = sorting(Number);
+                column(LinePlacementP2; BattleGridPlacementP2.Number) { }
+                column(aPlacementP2; a1) { }
+                column(bPlacementP2; b1) { }
+                column(cPlacementP2; c1) { }
+                column(dPlacementP2; d1) { }
+                column(ePlacementP2; e1) { }
+                column(fPlacementP2; f1) { }
+                column(gPlacementP2; g1) { }
+                column(hPlacementP2; h1) { }
+                column(iPlacementP2; i1) { }
+                column(jPlacementP2; j1) { }
                 column(BoatColorAPlacementP2; BoatColorA) { }
                 column(BoatColorBPlacementP2; BoatColorB) { }
                 column(BoatColorCPlacementP2; BoatColorC) { }
@@ -99,25 +100,95 @@ report 50100 "Resume Print BattleShip Game"
 
                 trigger OnPreDataItem()
                 begin
-                    BattleGridP2.SetRange(Number, 1, TempGridGameP2_g.Count());
+                    BattleGridPlacementP2.SetRange(Number, 1, TempGridPlacementP2_g.Count());
                 end;
 
                 trigger OnAfterGetRecord()
                 begin
-                    TempGridGameP2_g.Get('', '', BattleGridP2.Number, 0);
-                    GridMgt_g.AssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 1", Number, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+                    TempGridPlacementP2_g.Get('', '', BattleGridPlacementP2.Number, 0);
+                    GridMgt_g.PlacementGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 2", Number, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+                end;
+            }
+            dataitem(BattleGridGameP1; Integer)
+            {
+                DataItemTableView = sorting(Number);
+                column(LineGameP1; BattleGridGameP1.Number) { }
+                column(aGameP1; a2) { }
+                column(bGameP1; b2) { }
+                column(cGameP1; c2) { }
+                column(dGameP1; d2) { }
+                column(eGameP1; e2) { }
+                column(fGameP1; f2) { }
+                column(gGameP1; g2) { }
+                column(hGameP1; h2) { }
+                column(iGameP1; i2) { }
+                column(jGameP1; j2) { }
+                column(BoatColorAGameP1; BoatColorA) { }
+                column(BoatColorBGameP1; BoatColorB) { }
+                column(BoatColorCGameP1; BoatColorC) { }
+                column(BoatColorDGameP1; BoatColorD) { }
+                column(BoatColorEGameP1; BoatColorE) { }
+                column(BoatColorFGameP1; BoatColorF) { }
+                column(BoatColorGGameP1; BoatColorG) { }
+                column(BoatColorHGameP1; BoatColorH) { }
+                column(BoatColorIGameP1; BoatColorI) { }
+                column(BoatColorJGameP1; BoatColorJ) { }
+
+                trigger OnPreDataItem()
+                begin
+                    BattleGridGameP1.SetRange(Number, 1, TempGridGameP1_g.Count());
+                end;
+
+                trigger OnAfterGetRecord()
+                begin
+                    TempGridGameP1_g.Get('', '', BattleGridGameP1.Number, 0);
+                    GridMgt_g.GameGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 2", Number, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+                end;
+            }
+            dataitem(BattleGridGameP2; Integer)
+            {
+                DataItemTableView = sorting(Number);
+                column(LineGameP2; BattleGridGameP2.Number) { }
+                column(aGameP2; a2) { }
+                column(bGameP2; b2) { }
+                column(cGameP2; c2) { }
+                column(dGameP2; d2) { }
+                column(eGameP2; e2) { }
+                column(fGameP2; f2) { }
+                column(gGameP2; g2) { }
+                column(hGameP2; h2) { }
+                column(iGameP2; i2) { }
+                column(jGameP2; j2) { }
+                column(BoatColorAGameP2; BoatColorA) { }
+                column(BoatColorBGameP2; BoatColorB) { }
+                column(BoatColorCGameP2; BoatColorC) { }
+                column(BoatColorDGameP2; BoatColorD) { }
+                column(BoatColorEGameP2; BoatColorE) { }
+                column(BoatColorFGameP2; BoatColorF) { }
+                column(BoatColorGGameP2; BoatColorG) { }
+                column(BoatColorHGameP2; BoatColorH) { }
+                column(BoatColorIGameP2; BoatColorI) { }
+                column(BoatColorJGameP2; BoatColorJ) { }
+
+                trigger OnPreDataItem()
+                begin
+                    BattleGridGameP2.SetRange(Number, 1, TempGridGameP2_g.Count());
+                end;
+
+                trigger OnAfterGetRecord()
+                begin
+                    TempGridGameP2_g.Get('', '', BattleGridGameP2.Number, 0);
+                    GridMgt_g.GameGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 1", Number, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
                 end;
             }
             trigger OnAfterGetRecord()
             begin
+                TempGridPlacementP2_g.CreateGrid();
+                TempGridPlacementP1_g.CreateGrid();
                 TempGridGameP2_g.CreateGrid();
                 TempGridGameP1_g.CreateGrid();
             end;
 
-            trigger OnPreDataItem()
-            begin
-                SetRange("No.", 'AZ00194');
-            end;
         }
     }
     requestpage
@@ -137,19 +208,31 @@ report 50100 "Resume Print BattleShip Game"
         }
     }
     var
+        TempGridPlacementP1_g: record "BattleShip Grid" temporary;
+        TempGridPlacementP2_g: record "BattleShip Grid" temporary;
         TempGridGameP1_g: record "BattleShip Grid" temporary;
         TempGridGameP2_g: record "BattleShip Grid" temporary;
         GridMgt_g: CodeUnit CreateGrid;
-        a: code[1];
-        b: code[1];
-        c: code[1];
-        d: code[1];
-        e: code[1];
-        f: code[1];
-        g: code[1];
-        h: code[1];
-        i: code[1];
-        j: code[1];
+        a1: enum "Boat Type";
+        b1: enum "Boat Type";
+        c1: enum "Boat Type";
+        d1: enum "Boat Type";
+        e1: enum "Boat Type";
+        f1: enum "Boat Type";
+        g1: enum "Boat Type";
+        h1: enum "Boat Type";
+        i1: enum "Boat Type";
+        j1: enum "Boat Type";
+        a2: code[1];
+        b2: code[1];
+        c2: code[1];
+        d2: code[1];
+        e2: code[1];
+        f2: code[1];
+        g2: code[1];
+        h2: code[1];
+        i2: code[1];
+        j2: code[1];
         BoatColorA: Text[15];
         BoatColorB: Text[15];
         BoatColorC: Text[15];

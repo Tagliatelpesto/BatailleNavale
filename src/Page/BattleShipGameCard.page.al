@@ -150,6 +150,32 @@ page 50102 "BattleShip Game Card"
             // }
         }
     }
+    actions
+    {
+        area(processing)
+        {
+            action(PrintGame)
+            {
+                Caption = 'PrintGame';
+                ToolTip = 'Print your game';
+                Image = ConfirmAndPrint;
+                Visible = ActionPrintVisible;
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                trigger OnAction()
+                var
+                    RecGame: Record "BattleShip Game";
+                    ReportPrint: Report "Resume Print BattleShip Game";
+                begin
+                    RecGame.SetRange("No.", Rec."No.");
+                    ReportPrint.SetTableView(RecGame);
+                    ReportPrint.RunModal();
+                end;
+            }
+        }
+    }
+
 
     trigger OnPageBackgroundTaskCompleted(TaskId: Integer; Results: Dictionary of [Text, Text])
     begin
@@ -173,6 +199,7 @@ page 50102 "BattleShip Game Card"
         GameGridPlayer2Visible := (Rec."Game Statut" = "Game Statut"::Finish) or ((Rec."Game Statut" = "Game Statut"::Game) and (Rec."Player 1" <> UserId));
         GameGridPlayer1Editable := (Rec."Game Statut" = "Game Statut"::Game) and (Rec."Player 1" = UserId);
         GameGridPlayer2Editable := (Rec."Game Statut" = "Game Statut"::Game) and (Rec."Player 2" = UserId);
+        ActionPrintVisible := (Rec."Game Statut" = "Game Statut"::Finish);
     end;
 
 
@@ -223,6 +250,7 @@ page 50102 "BattleShip Game Card"
         GameGridPlayer2Visible: Boolean;
         GameGridPlayer1Editable: Boolean;
         GameGridPlayer2Editable: Boolean;
+        ActionPrintVisible: Boolean;
         TaskIdToCheckIfNeedToRefresh_g: Integer;
 
 }

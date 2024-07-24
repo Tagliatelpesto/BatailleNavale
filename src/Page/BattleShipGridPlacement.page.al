@@ -145,7 +145,9 @@ page 50105 "BattleShip Grid Placement"
 
     trigger OnAfterGetRecord()
     begin
-        SetGrid();
+        // SetGrid();
+        CreateGridMgt.PlacementGridAssignValuesToColumn(RecGame_g."No.", Player_g, Rec.Line, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+
     end;
 
     procedure SetGrid()
@@ -314,7 +316,6 @@ page 50105 "BattleShip Grid Placement"
         if not (AroundRecIsFree_l.IsEmpty()) then
             if not ((NewBoatToInsert.Line = Line_p) and (NewBoatToInsert.Column = Column_p) and (NewBoatToInsert."Boat Type" <> BoatType_p)) then
                 Error(PlacementErr);
-
 
         SameBoatPlacement_l.SetCurrentKey("No. Game", "No. Player", "Boat Type");
         SameBoatPlacement_l.SetRange("No. Game", RecGame_g."No.");
