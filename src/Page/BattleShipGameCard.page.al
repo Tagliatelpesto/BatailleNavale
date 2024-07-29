@@ -13,46 +13,40 @@ page 50102 "BattleShip Game Card"
                 Caption = 'General';
                 group(Info)
                 {
-                    Editable = (Rec."Game Statut" = "Game Statut"::Placement) or (Rec."Game Statut" = "Game Statut"::Finish);
                     ShowCaption = false;
                     field("No."; Rec."No.")
                     {
-                        Editable = false;
+                        Editable = GameIsPlacement;
                         Caption = 'No.';
                         ToolTip = 'Specifies the value of the No. field.', Comment = '%';
                     }
                     field(Comment; Rec.Comment)
                     {
+                        Editable = GameIsPlacement;
                         Caption = 'Comment';
                         ToolTip = 'Specifies the value of the Comment field.', Comment = '%';
                     }
                     field("Posting Date"; Rec."Posting Date")
                     {
-                        Editable = false;
+                        Editable = GameIsPlacement;
                         Caption = 'Posting Date';
                         ToolTip = 'Specifies the value of the Posting Date field.', Comment = '%';
                     }
                 }
                 group(Player)
                 {
-                    Visible = (Rec."Game Statut" = "Game Statut"::Placement) or (Rec."Game Statut" = "Game Statut"::Finish);
+                    Editable = GameIsPlacement;
+                    Visible = GroupPlayerVisible;
                     ShowCaption = false;
-                    Enabled = Rec."Game Statut" = "Game Statut"::Placement;
+
                     field("Player 1"; Rec."Player 1")
                     {
                         Caption = 'Player 1';
                         ToolTip = 'Specifies the value of the Player 1 field.', Comment = '%';
                         trigger OnValidate()
-                        var
-                            GridRecord: Record "BattleShip Grid";
                         begin
-                            GridRecord.Reset();
-                            if (xRec."Player 1" <> Rec."Player 1") then begin
-                                GridRecord.SetRange("No. Game", xRec."No.");
-                                GridRecord.SetRange("No. Player", xRec."Player 1");
-                                GridRecord.DeleteAll();
-                            end;
-                            SetVisibleEditableVariable();
+                            GameMgt.IsOtherPlayerBeenChoose(Rec."No.", Rec."Player 1", xRec."Player 1");
+                            SetVisibleEditableVariable()
                         end;
                     }
                     field("Player 2"; Rec."Player 2")
@@ -60,23 +54,16 @@ page 50102 "BattleShip Game Card"
                         Caption = 'Player 2';
                         ToolTip = 'Specifies the value of the Player 2 field.', Comment = '%';
                         trigger OnValidate()
-                        var
-                            GridRecord: Record "BattleShip Grid";
                         begin
-                            GridRecord.Reset();
-                            if (xRec."Player 2" <> Rec."Player 2") then begin
-                                GridRecord.SetRange("No. Game", xRec."No.");
-                                GridRecord.SetRange("No. Player", xRec."Player 2");
-                                GridRecord.DeleteAll();
-                            end;
-                            SetVisibleEditableVariable();
+                            GameMgt.IsOtherPlayerBeenChoose(Rec."No.", Rec."Player 2", xRec."Player 2");
+                            SetVisibleEditableVariable()
                         end;
                     }
                 }
                 group(GameWinner)
                 {
 
-                    Visible = (Rec."Game Statut" = "Game Statut"::Finish);
+                    Visible = GameIsFinish;
                     ShowCaption = false;
                     field(Winner; Rec.Winner)
                     {
@@ -100,7 +87,7 @@ page 50102 "BattleShip Game Card"
                 group(PlayerTurnGroup)
                 {
 
-                    Visible = (Rec."Game Statut" = "Game Statut"::Game);
+                    Visible = GameIsGame;
                     ShowCaption = false;
                     field(PlayerTurn; Rec."Player Turn")
                     {
@@ -159,7 +146,7 @@ page 50102 "BattleShip Game Card"
                 Caption = 'PrintGame';
                 ToolTip = 'Print your game';
                 Image = ConfirmAndPrint;
-                Visible = ActionPrintVisible;
+                Visible = GameIsFinish;
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
@@ -175,58 +162,50 @@ page 50102 "BattleShip Game Card"
             }
         }
     }
-
-
     trigger OnPageBackgroundTaskCompleted(TaskId: Integer; Results: Dictionary of [Text, Text])
     begin
         if (TaskId = TaskIdToCheckIfNeedToRefresh_g) then
-            EnqueueBackTaskToCheckIfNeedToRefresh();
+            SetAndCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
+    end;
+
+    trigger OnInsertRecord(BelowxRec: Boolean): Boolean
+    begin
+        Rec.Insert(true);
+        SetAndCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
+        exit(false);
+    end;
+
+    trigger OnOpenPage()
+    begin
+        SetVisibleEditableVariable();
     end;
 
     trigger OnAfterGetRecord()
     begin
-        EnqueueBackTaskToCheckIfNeedToRefresh();
-    end;
-
-    procedure SetVisibleEditableVariable()
-    begin
-        // Set the Visible and Editable variable of the Grid
-        PlacementGridPlayer1Visible := (Rec."Game Statut" = "Game Statut"::Finish) or (Rec."Player 2" <> UserId);
-        PlacementGridPlayer2Visible := (Rec."Game Statut" = "Game Statut"::Finish) or (Rec."Player 1" <> UserId);
-        PlacementGridPlayer1Editable := (Rec."Game Statut" = "Game Statut"::Placement) and (Rec."Player 1" = UserId);
-        PlacementGridPlayer2Editable := (Rec."Game Statut" = "Game Statut"::Placement) and (Rec."Player 2" = UserId);
-        GameGridPlayer1Visible := (Rec."Game Statut" = "Game Statut"::Finish) or ((Rec."Game Statut" = "Game Statut"::Game) and (Rec."Player 2" <> UserId));
-        GameGridPlayer2Visible := (Rec."Game Statut" = "Game Statut"::Finish) or ((Rec."Game Statut" = "Game Statut"::Game) and (Rec."Player 1" <> UserId));
-        GameGridPlayer1Editable := (Rec."Game Statut" = "Game Statut"::Game) and (Rec."Player 1" = UserId);
-        GameGridPlayer2Editable := (Rec."Game Statut" = "Game Statut"::Game) and (Rec."Player 2" = UserId);
-        ActionPrintVisible := (Rec."Game Statut" = "Game Statut"::Finish);
+        SetAndCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
     end;
 
 
-
-    procedure SetGrid()
+    procedure CreateGrid(): Boolean
     begin
         // The Get is used to update the grids with an updated Record.
-        Rec.Get(Rec."No.");
+        if not Rec.Get(Rec."No.") then
+            exit(false);
         CurrPage.GridPlacementP1.Page.CreateGrid(Rec, Rec."Player 1");
         CurrPage.GridPlacementP2.Page.CreateGrid(Rec, Rec."Player 2");
         CurrPage.GridGameP1.Page.CreateGrid(Rec, Rec."Player 1", Rec."Player 2");
         CurrPage.GridGameP2.Page.CreateGrid(Rec, Rec."Player 2", Rec."Player 1");
+        exit(true);
     end;
-
-    local procedure ProcOnAfterGetRecord()
-    begin
-        SetVisibleEditableVariable();
-        SetGrid();
-    end;
-
     //Set the refresh of the page
-    local procedure EnqueueBackTaskToCheckIfNeedToRefresh()
+    procedure SetAndCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh()
     var
         TaskParameters: Dictionary of [Text, Text];
         NoPartieInText: Text[20];
     begin
-        ProcOnAfterGetRecord();
+        SetVisibleEditableVariable();
+        if not CreateGrid() then
+            exit;
         NoPartieInText := Format(Rec."No.");
         TaskParameters.Add('No.', NoPartieInText);
 
@@ -241,7 +220,29 @@ page 50102 "BattleShip Game Card"
         end;
     end;
 
+    procedure SetVisibleEditableVariable()
+    begin
+        // Set the Visible and Editable variable of the Grid
+        GameIsPlacement := Rec."Game Statut" = "Game Statut"::Placement;
+        GameIsGame := Rec."Game Statut" = "Game Statut"::Game;
+        GameIsFinish := Rec."Game Statut" = "Game Statut"::Finish;
+        PlacementGridPlayer1Visible := GameIsFinish or (Rec."Player 2" <> UserId);
+        PlacementGridPlayer2Visible := GameIsFinish or (Rec."Player 1" <> UserId);
+        PlacementGridPlayer1Editable := GameIsPlacement and (Rec."Player 1" = UserId);
+        PlacementGridPlayer2Editable := GameIsPlacement and (Rec."Player 2" = UserId);
+        GameGridPlayer1Visible := GameIsFinish or (GameIsGame and (Rec."Player 2" <> UserId));
+        GameGridPlayer2Visible := GameIsFinish or (GameIsGame and (Rec."Player 1" <> UserId));
+        GameGridPlayer1Editable := GameIsGame and (Rec."Player 1" = UserId);
+        GameGridPlayer2Editable := GameIsGame and (Rec."Player 2" = UserId);
+        GroupPlayerVisible := GameIsPlacement or GameIsFinish;
+    end;
+
     var
+        GameMgt: Codeunit "Game Mgt";
+        GameIsPlacement: Boolean;
+        GroupPlayerVisible: Boolean;
+        GameIsFinish: Boolean;
+        GameIsGame: Boolean;
         PlacementGridPlayer1Visible: Boolean;
         PlacementGridPlayer2Visible: Boolean;
         PlacementGridPlayer1Editable: Boolean;
@@ -250,7 +251,7 @@ page 50102 "BattleShip Game Card"
         GameGridPlayer2Visible: Boolean;
         GameGridPlayer1Editable: Boolean;
         GameGridPlayer2Editable: Boolean;
-        ActionPrintVisible: Boolean;
         TaskIdToCheckIfNeedToRefresh_g: Integer;
+
 
 }

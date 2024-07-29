@@ -56,5 +56,10 @@ page 50100 "BattleShip Game List"
             }
         }
     }
-
+    trigger OnOpenPage()
+    var
+        GameMgt: CodeUnit "Game Mgt";
+    begin
+        GameMgt.IsNewUser();
+    end;
 }

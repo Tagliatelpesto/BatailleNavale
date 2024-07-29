@@ -6,7 +6,7 @@ table 50102 "BattleShip Player"
     DrillDownPageId = "BattleShip Player List";
     fields
     {
-        field(1; "User ID"; Code[20])
+        field(1; "User ID"; Text[50])
         {
             Caption = 'ID';
         }

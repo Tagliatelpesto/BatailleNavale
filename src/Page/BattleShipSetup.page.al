@@ -23,7 +23,6 @@ page 50103 "BattleShip Setup"
     }
     trigger OnOpenPage()
     begin
-        Rec.Reset();
         if not Rec.Get() then begin
             Rec.Init();
             Rec.Insert();

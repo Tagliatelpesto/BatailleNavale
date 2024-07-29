@@ -10,11 +10,12 @@ table 50101 "BattleShip Game"
             Caption = 'No.';
             trigger OnValidate()
             var
+                BattleShipSetUp: Record "BattleShip Setup";
                 NoSeries: Codeunit "No. Series";
             begin
                 if "No." <> xRec."No." then begin
                     BattleShipSetUp.Get();
-                    NoSeries.TestManual(GetNoSeriesCode());
+                    NoSeries.TestManual(BattleShipSetUp."No. Series");
                     "No. Series" := '';
                 end;
             end;
@@ -30,8 +31,7 @@ table 50101 "BattleShip Game"
             trigger OnValidate()
             begin
                 TestField("Posting Date");
-                TestNoSeriesDate("No.", "No. Series");
-                BattleShipSetUp.Get();
+                GameMgt.TestNoSeriesDate("No.", "No. Series");
             end;
         }
         field(4; "Comment"; Text[250])
@@ -44,7 +44,7 @@ table 50101 "BattleShip Game"
             TableRelation = "BattleShip Player";
             trigger OnValidate()
             begin
-                if "Player 1" = "Player 2" then
+                if ("Player 1" = "Player 2") and ("Player 1" <> '') then
                     Error('Player 1 ne doit pas être égal à %1', "Player 2");
             end;
         }
@@ -54,7 +54,7 @@ table 50101 "BattleShip Game"
             TableRelation = "BattleShip Player";
             trigger OnValidate()
             begin
-                if "Player 2" = "Player 1" then
+                if ("Player 2" = "Player 1") and ("Player 2" <> '') then
                     Error('Player 2 ne doit pas être égal à %1', "Player 1");
             end;
         }
@@ -69,7 +69,7 @@ table 50101 "BattleShip Game"
         field(9; "Number Boat Placed"; Integer)
         {
             FieldClass = FlowField;
-            CalcFormula = count("BattleShip Grid" where("No. Game" = field("No.")));
+            CalcFormula = count("BattleShip Grid" where("No.Game" = field("No.")));
         }
         field(10; "Game Statut"; Enum "Game Statut")
         {
@@ -91,70 +91,19 @@ table 50101 "BattleShip Game"
     }
     trigger OnInsert()
     begin
-        InitInsert();
-        SetView('');
+        GameMgt.InitInsert(Rec, xRec);
+        GameMgt.TestNoSeriesDate(Rec."No.", Rec."No. Series");
     end;
 
     trigger OnDelete()
     var
         GridRecord: Record "BattleShip Grid";
     begin
-        GridRecord.SetRange("No. Game", Rec."No.");
+        GridRecord.SetRange("No.Game", Rec."No.");
         GridRecord.DeleteAll();
     end;
 
-    trigger OnModify()
-    begin
-
-    end;
-
-
-    procedure InitInsert()
     var
-        NoSeries: Codeunit "No. Series";
-        NoSeriesCode: Code[20];
-    begin
-        //Set Automaticaly The Number of the Game and the Date
-        "Posting Date" := WORKDATE();
-        if "No." = '' then begin
-            NoSeriesCode := GetNoSeriesCode();
-            TestNoSeries();
-            "No. Series" := NoSeriesCode;
-            if NoSeries.AreRelated("No. Series", xRec."No. Series") then
-                "No. Series" := xRec."No. Series";
-            "No." := NoSeries.GetNextNo("No. Series", "Posting Date");
-        end;
-    end;
+        GameMgt: CodeUnit "Game Mgt";
 
-    procedure GetNoSeriesCode(): Code[20]
-    var
-        NoSeriesCode: Code[20];
-    begin
-        GetBattleShipSetup();
-        NoSeriesCode := BattleShipSetUp."No. Series";
-        exit(NoSeriesCode);
-    end;
-
-    local procedure GetBattleShipSetup()
-    begin
-        BattleShipSetUp.Get();
-    end;
-
-    procedure TestNoSeries()
-    begin
-        BattleShipSetUp.TestField("No. Series");
-    end;
-
-    procedure TestNoSeriesDate(No: Code[20]; NoSeriesCode: Code[20])
-    begin
-        if (No <> '') and (NoSeriesCode <> '') then begin
-            GlobalNoSeries.Get(NoSeriesCode);
-            if GlobalNoSeries."Date Order" then
-                Error('No valid Date');
-        end;
-    end;
-
-    var
-        BattleShipSetUp: Record "BattleShip SetUp";
-        GlobalNoSeries: Record "No. Series";
 }

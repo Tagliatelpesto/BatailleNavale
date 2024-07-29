@@ -70,7 +70,7 @@ report 50100 "Resume Print BattleShip Game"
                 trigger OnAfterGetRecord()
                 begin
                     TempGridPlacementP1_g.Get('', '', BattleGridPlacementP1.Number, 0);
-                    GridMgt_g.PlacementGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 1", Number, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+                    CreationGridMgt_g.PlacementGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 1", Number, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
                 end;
             }
             dataitem(BattleGridPlacementP2; Integer)
@@ -106,7 +106,7 @@ report 50100 "Resume Print BattleShip Game"
                 trigger OnAfterGetRecord()
                 begin
                     TempGridPlacementP2_g.Get('', '', BattleGridPlacementP2.Number, 0);
-                    GridMgt_g.PlacementGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 2", Number, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+                    CreationGridMgt_g.PlacementGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 2", Number, a1, b1, c1, d1, e1, f1, g1, h1, i1, j1, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
                 end;
             }
             dataitem(BattleGridGameP1; Integer)
@@ -142,7 +142,7 @@ report 50100 "Resume Print BattleShip Game"
                 trigger OnAfterGetRecord()
                 begin
                     TempGridGameP1_g.Get('', '', BattleGridGameP1.Number, 0);
-                    GridMgt_g.GameGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 2", Number, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+                    CreationGridMgt_g.GameGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 2", Number, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
                 end;
             }
             dataitem(BattleGridGameP2; Integer)
@@ -178,15 +178,17 @@ report 50100 "Resume Print BattleShip Game"
                 trigger OnAfterGetRecord()
                 begin
                     TempGridGameP2_g.Get('', '', BattleGridGameP2.Number, 0);
-                    GridMgt_g.GameGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 1", Number, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+                    CreationGridMgt_g.GameGridAssignValuesToColumn(BattleShipGame."No.", BattleShipGame."Player 1", Number, a2, b2, c2, d2, e2, f2, g2, h2, i2, j2, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
                 end;
             }
             trigger OnAfterGetRecord()
+            var
+                CreationGridMgt: CodeUnit "Creation Grid Mgt";
             begin
-                TempGridPlacementP2_g.CreateGrid();
-                TempGridPlacementP1_g.CreateGrid();
-                TempGridGameP2_g.CreateGrid();
-                TempGridGameP1_g.CreateGrid();
+                CreationGridMgt.CreateGrid(TempGridPlacementP2_g);
+                CreationGridMgt.CreateGrid(TempGridPlacementP1_g);
+                CreationGridMgt.CreateGrid(TempGridGameP2_g);
+                CreationGridMgt.CreateGrid(TempGridGameP1_g);
             end;
 
         }
@@ -212,7 +214,7 @@ report 50100 "Resume Print BattleShip Game"
         TempGridPlacementP2_g: record "BattleShip Grid" temporary;
         TempGridGameP1_g: record "BattleShip Grid" temporary;
         TempGridGameP2_g: record "BattleShip Grid" temporary;
-        GridMgt_g: CodeUnit CreateGrid;
+        CreationGridMgt_g: CodeUnit "Creation Grid Mgt";
         a1: enum "Boat Type";
         b1: enum "Boat Type";
         c1: enum "Boat Type";

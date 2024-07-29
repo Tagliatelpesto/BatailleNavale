@@ -1042,7 +1042,7 @@ True, "LightBlue")</BackgroundColor>
                   <Width>0.69634in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.72047in</Width>
+                  <Width>0.72829in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.7161in</Width>
@@ -1066,7 +1066,7 @@ True, "LightBlue")</BackgroundColor>
                   <Width>0.72048in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.70658in</Width>
+                  <Width>0.71265in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.71711in</Width>
@@ -1518,7 +1518,7 @@ Fields!aGameP1.Value = "O", "Flaque",
 Fields!aGameP1.Value = "X", "Explosion", 
 True, "Points")</Value>
                               <Sizing>Fit</Sizing>
-                              <Left>0.03526cm</Left>
+                              <Left>0.05514cm</Left>
                               <Height>1.5cm</Height>
                               <Width>1.79473cm</Width>
                               <Style>
@@ -1563,6 +1563,7 @@ Fields!bGameP1.Value = "O", "Flaque",
 Fields!bGameP1.Value = "X", "Explosion", 
 True, "Points")</Value>
                                   <Sizing>Fit</Sizing>
+                                  <Left>0.01987cm</Left>
                                   <Height>1.5cm</Height>
                                   <Width>1.79473cm</Width>
                                   <Style>
@@ -1574,7 +1575,7 @@ True, "Points")</Value>
                               </ReportItems>
                               <KeepTogether>true</KeepTogether>
                               <Height>0.59055in</Height>
-                              <Width>0.70659in</Width>
+                              <Width>0.71441in</Width>
                               <Style>
                                 <Border>
                                   <Style>Solid</Style>
@@ -1620,6 +1621,7 @@ Fields!cGameP1.Value = "O", "Flaque",
 Fields!cGameP1.Value = "X", "Explosion",
  True, "Points")</Value>
                               <Sizing>Fit</Sizing>
+                              <Left>0.01987cm</Left>
                               <Height>1.5cm</Height>
                               <Width>1.79473cm</Width>
                               <Style>
@@ -1882,7 +1884,6 @@ Fields!iGameP1.Value = "O", "Flaque",
 Fields!iGameP1.Value = "X", "Explosion", 
 True, "Points")</Value>
                                   <Sizing>Fit</Sizing>
-                                  <Left>0.00002cm</Left>
                                   <Height>1.5cm</Height>
                                   <Width>1.79473cm</Width>
                                   <Style>
@@ -1894,7 +1895,7 @@ True, "Points")</Value>
                               </ReportItems>
                               <KeepTogether>true</KeepTogether>
                               <Height>0.59055in</Height>
-                              <Width>0.70659in</Width>
+                              <Width>0.71265in</Width>
                               <Style>
                                 <Border>
                                   <Style>Solid</Style>
@@ -1940,7 +1941,7 @@ Fields!jGameP1.Value = "O", "Flaque",
 Fields!jGameP1.Value = "X", "Explosion", 
 True, "Points")</Value>
                               <Sizing>Fit</Sizing>
-                              <Left>0.00003cm</Left>
+                              <Left>0.01991cm</Left>
                               <Height>1.5cm</Height>
                               <Width>1.79473cm</Width>
                               <Style>
@@ -2020,7 +2021,7 @@ True, "LightBlue")</BackgroundColor>
             <Top>2.60395in</Top>
             <Left>0.11139in</Left>
             <Height>1.09055in</Height>
-            <Width>7.85046in</Width>
+            <Width>7.86436in</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -4022,13 +4023,38 @@ True, "LightBlue")</BackgroundColor>
         <Height>18.65161cm</Height>
         <Style />
       </Body>
-      <Width>20.25186cm</Width>
+      <Width>20.2584cm</Width>
       <Page>
         <PageHeader>
           <Height>3.73569cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
+            <Rectangle Name="Rectangle2">
+              <KeepTogether>true</KeepTogether>
+              <Top>0.46192cm</Top>
+              <Left>0.55064cm</Left>
+              <Height>2.95861cm</Height>
+              <Width>19.23745cm</Width>
+              <Style>
+                <Border>
+                  <Style>Dotted</Style>
+                </Border>
+              </Style>
+            </Rectangle>
+            <Rectangle Name="Rectangle3">
+              <KeepTogether>true</KeepTogether>
+              <Top>0.21264cm</Top>
+              <Left>0.26842cm</Left>
+              <Height>3.52305cm</Height>
+              <Width>19.83717cm</Width>
+              <ZIndex>1</ZIndex>
+              <Style>
+                <Border>
+                  <Style>Dotted</Style>
+                </Border>
+              </Style>
+            </Rectangle>
             <Textbox Name="Textbox1">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -4048,6 +4074,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>1.2454in</Left>
               <Height>0.22917in</Height>
               <Width>0.74583in</Width>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4077,7 +4104,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>2.5829in</Left>
               <Height>0.22917in</Height>
               <Width>1.2in</Width>
-              <ZIndex>1</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4107,7 +4134,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>1.2454in</Left>
               <Height>0.22917in</Height>
               <Width>0.9in</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4137,7 +4164,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>5.27873in</Left>
               <Height>0.22917in</Height>
               <Width>0.6in</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4167,7 +4194,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>5.27873in</Left>
               <Height>0.22917in</Height>
               <Width>0.6in</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4197,7 +4224,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>7.0254in</Left>
               <Height>0.22917in</Height>
               <Width>0.75972in</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>7</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4227,7 +4254,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>7.0254in</Left>
               <Height>0.22917in</Height>
               <Width>0.75972in</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>8</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4257,7 +4284,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>1.22656cm</Left>
               <Height>0.58208cm</Height>
               <Width>1.524cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>9</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4290,7 +4317,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>6.56056cm</Left>
               <Height>0.58208cm</Height>
               <Width>2.286cm</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>10</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4323,7 +4350,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>1.22656cm</Left>
               <Height>0.58208cm</Height>
               <Width>1.524cm</Width>
-              <ZIndex>9</ZIndex>
+              <ZIndex>11</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4356,7 +4383,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>10.75297cm</Left>
               <Height>0.58208cm</Height>
               <Width>2.47862cm</Width>
-              <ZIndex>10</ZIndex>
+              <ZIndex>12</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4389,7 +4416,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>10.75297cm</Left>
               <Height>0.58208cm</Height>
               <Width>2.5139cm</Width>
-              <ZIndex>11</ZIndex>
+              <ZIndex>13</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4422,7 +4449,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>15.68339cm</Left>
               <Height>0.58208cm</Height>
               <Width>2.05529cm</Width>
-              <ZIndex>12</ZIndex>
+              <ZIndex>14</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4455,7 +4482,7 @@ True, "LightBlue")</BackgroundColor>
               <Left>15.68339cm</Left>
               <Height>0.58208cm</Height>
               <Width>2.02001cm</Width>
-              <ZIndex>13</ZIndex>
+              <ZIndex>15</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -4469,32 +4496,6 @@ True, "LightBlue")</BackgroundColor>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Rectangle Name="Rectangle2">
-              <KeepTogether>true</KeepTogether>
-              <Top>0.46192cm</Top>
-              <Left>0.55064cm</Left>
-              <Height>2.95861cm</Height>
-              <Width>19.23745cm</Width>
-              <ZIndex>14</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Dotted</Style>
-                </Border>
-              </Style>
-            </Rectangle>
-            <Rectangle Name="Rectangle3">
-              <KeepTogether>true</KeepTogether>
-              <Top>0.21264cm</Top>
-              <Left>0.26842cm</Left>
-              <Height>3.52305cm</Height>
-              <Width>19.83717cm</Width>
-              <ZIndex>15</ZIndex>
-              <Style>
-                <Border>
-                  <Style>Dotted</Style>
-                </Border>
-              </Style>
-            </Rectangle>
           </ReportItems>
           <Style>
             <Border>
