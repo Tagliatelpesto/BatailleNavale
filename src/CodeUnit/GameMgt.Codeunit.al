@@ -1,5 +1,10 @@
 codeunit 50103 "Game Mgt"
-{
+{    /// <summary>
+     /// Initialize a Record of a BattleShip Game and set his No Serie, No.
+     /// </summary>
+     /// <param name="BattleShip Game Rec">The current Record of the BattleShip Game</param>
+     /// <param name="BattleShip Game xRec">The previous Rec of the BattleShip Game</param>
+     /// <returns>No Return</returns>
     procedure InitInsert(var "BattleShip Game Rec": Record "BattleShip Game"; var "BattleShip Game xRec": Record "BattleShip Game")
     var
         BattleShipSetUp: Record "BattleShip Setup";
@@ -17,7 +22,12 @@ codeunit 50103 "Game Mgt"
         end;
     end;
 
-
+    /// <summary>
+    /// Test if the Date is valid for a No Serie and No.
+    /// </summary>
+    /// <param name="No">The No. of the BattleShip Game</param>
+    /// <param name="NoSeriesCode">The No. Series code of the BattleShip Game</param>
+    /// <returns>No Return</returns>
     procedure TestNoSeriesDate(No: Code[20]; NoSeriesCode: Code[20])
     var
         GlobalNoSeries: Record "No. Series";
@@ -28,7 +38,10 @@ codeunit 50103 "Game Mgt"
                 Error('No valid Date');
         end;
     end;
-
+    /// <summary>
+    /// Test if the User is a New One or Not and Create him if he's a new one
+    /// </summary>
+    /// <returns>No Return</returns>
     procedure IsNewUser()
     var
         PlayerTable: Record "BattleShip Player";
@@ -39,6 +52,13 @@ codeunit 50103 "Game Mgt"
             PlayerTable.Insert();
         end;
     end;
+
+    /// <summary>
+    /// If The User Id of the Player as changed, delete his grid and his placed boat
+    /// </summary>
+    /// <param name="GameNo.">The No. of the current BattleShip Game</param>
+    /// <param name="Player">The Current Player</param>
+    /// <param name="xPlayer">The previous Player </param>
 
     procedure IsOtherPlayerBeenChoose("GameNo.": Code[20]; Player: Text[50]; xPlayer: Text[50])
     var

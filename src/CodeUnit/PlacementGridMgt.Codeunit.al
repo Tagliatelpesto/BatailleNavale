@@ -1,7 +1,12 @@
 codeunit 50105 "Placement Grid Mgt"
 {
 
-
+    /// <summary>
+    /// Determines whether the two No. Series are related.
+    /// </summary>
+    /// <param name="DefaultNoSeriesCode">The primary No. Series code.</param>
+    /// <param name="RelatedNoSeriesCode">The No. Series code that is related to the primary No. Series code.</param>
+    /// <returns>True if the two No. Series are related, false otherwise.</returns>
     procedure OnValidateChoice(BattleShipGrid_l: Record "BattleShip Grid"; BattleShipGame_l: Record "BattleShip Game"; Player: Text[50];
     Line_p: Integer; Column_p: Integer; BoatType_p: Enum "Boat Type")
     begin
@@ -17,10 +22,13 @@ codeunit 50105 "Placement Grid Mgt"
             BattleShipGame_l."Player Turn" := BattleShipGame_l."Player 1";
             BattleShipGame_l.Modify();
         end
-
-
     end;
-
+    /// <summary>
+    /// Determines whether the two No. Series are related.
+    /// </summary>
+    /// <param name="DefaultNoSeriesCode">The primary No. Series code.</param>
+    /// <param name="RelatedNoSeriesCode">The No. Series code that is related to the primary No. Series code.</param>
+    /// <returns>True if the two No. Series are related, false otherwise.</returns>
     procedure CreateOrModifyBoat(BattleShipGame_l: Record "BattleShip Game"; Player: Text[50];
     Line_p: Integer; Column_p: Integer; BoatType_p: Enum "Boat Type"; BoatStatut_p: Enum "Boat Statut")
     var
@@ -34,7 +42,12 @@ codeunit 50105 "Placement Grid Mgt"
         else
             CreationGridMgt.InsertBoat(BattleShipGame_l."No.", Player, Line_p, Column_p, BoatType_p, BoatStatut_p);
     end;
-
+    /// <summary>
+    /// Determines whether the two No. Series are related.
+    /// </summary>
+    /// <param name="DefaultNoSeriesCode">The primary No. Series code.</param>
+    /// <param name="RelatedNoSeriesCode">The No. Series code that is related to the primary No. Series code.</param>
+    /// <returns>True if the two No. Series are related, false otherwise.</returns>
     procedure DeleteBoat(BattleShipGame_l: Record "BattleShip Game"; Player: Text[50];
     Line_p: Integer; Column_p: Integer; BoatType_p: Enum "Boat Type")
     var
@@ -56,7 +69,12 @@ codeunit 50105 "Placement Grid Mgt"
             BoatToDelete_l.Delete();
 
     end;
-
+    /// <summary>
+    /// Determines whether the two No. Series are related.
+    /// </summary>
+    /// <param name="DefaultNoSeriesCode">The primary No. Series code.</param>
+    /// <param name="RelatedNoSeriesCode">The No. Series code that is related to the primary No. Series code.</param>
+    /// <returns>True if the two No. Series are related, false otherwise.</returns>
     procedure VerifBoat(BattleShipGame_l: Record "BattleShip Game"; Player: Text[50];
     Line_p: Integer; Column_p: Integer; BoatType_p: Enum "Boat Type")
     var

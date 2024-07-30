@@ -149,7 +149,13 @@ page 50104 "BattleShip Grid Game"
         //Show the different ships and their status in the Grid.
         CreationGridMgt.GameGridAssignValuesToColumn(RecGame_g."No.", Opponent_g, Rec.Line, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
     end;
-
+    /// <summary>
+    /// Create the Game Grid and Update the page without saving the Record
+    /// </summary>
+    /// <param name="RecGame_p">Record of the current BattleShip Game</param>
+    /// <param name="Player_p">The Current Player</param>
+    /// <param name="Opponent_p">Opponent of the Current Player</param>
+    /// <returns>No Return</returns>
     procedure CreateGrid(RecGame_p: Record "BattleShip Game"; Player_p: Text[50]; Opponent_p: Text[50])
     begin
         RecGame_g := RecGame_p;
@@ -158,10 +164,14 @@ page 50104 "BattleShip Grid Game"
         CreationGridMgt.CreateGrid(Rec);
         CurrPage.Update(false);
     end;
-
+    /// <summary>
+    /// Send the Record of the game and the paremeter of the boat targeted on this coordinate and Update the page without saving the Record
+    /// </summary>
+    /// <param name="Line_p">Line targeted</param>
+    /// <param name="Column_p">Column targeted</param>
+    /// <returns>No Return</returns>
     procedure OnValidateChoice(Line_p: Integer; Column_p: Integer)
     begin
-
         if (RecGame_g."Player Turn" = UserId) and (RecGame_g."Game Statut" = "Game Statut"::Game) then
             GameGridMgt.HitOrMiss(RecGame_g, Player_g, Opponent_g, Line_p, Column_p, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
         CurrPage.Update(false);

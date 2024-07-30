@@ -189,7 +189,10 @@ page 50102 "BattleShip Game Card"
         SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
     end;
 
-
+    /// <summary>
+    /// Create the 4 Grid
+    /// </summary>
+    /// <returns>Return True if the Grids has been created. Return False if the game doesn't exist</returns>
     procedure CreateGrid(): Boolean
     begin
         // The Get is used to update the grids with an updated Record.
@@ -201,7 +204,9 @@ page 50102 "BattleShip Game Card"
         CurrPage.GridGameP2.Page.CreateGrid(Rec, Rec."Player 2", Rec."Player 1");
         exit(true);
     end;
-    //Set the refresh of the page
+    /// <summary>
+    /// Set the Visible and Editable variable, Create Grid and Refresh the page in a background task
+    /// </summary>
     procedure SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh()
     var
         TaskParameters: Dictionary of [Text, Text];
@@ -223,10 +228,11 @@ page 50102 "BattleShip Game Card"
                 end;
         end;
     end;
-
+    /// <summary>
+    ///  Set the Visible and Editable variable of the Grid
+    /// </summary>
     procedure SetVisibleEditableVariable()
     begin
-        // Set the Visible and Editable variable of the Grid
         GameIsPlacement := Rec."Game Statut" = "Game Statut"::Placement;
         GameIsGame := Rec."Game Statut" = "Game Statut"::Game;
         GameIsFinish := Rec."Game Statut" = "Game Statut"::Finish;

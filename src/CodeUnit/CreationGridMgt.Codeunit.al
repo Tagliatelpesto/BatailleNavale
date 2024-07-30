@@ -1,9 +1,10 @@
 codeunit 50102 "Creation Grid Mgt"
 {
-    trigger OnRun()
-    begin
-    end;
-
+    /// <summary>
+    /// Create the 10 Lines of a BattleShip Grid
+    /// </summary>
+    /// <param name="BattleShipGridRecord">Record of a BattleShip Grid</param>
+    /// <returns>No Return</returns>
     procedure CreateGrid(var BattleShipGridRecord: Record "BattleShip Grid")
     var
         k: Integer;
@@ -18,7 +19,16 @@ codeunit 50102 "Creation Grid Mgt"
             BattleShipGridRecord.Insert();
         end;
     end;
-
+    /// <summary>
+    /// Insert a New Boat for a certains BattleShip Game
+    /// </summary>
+    /// <param name="NoGame_p">Code of the Game where the Boat need to be created</param>
+    /// <param name="Player_p">The player who want to created the boat</param>
+    /// <param name="Line_p">Line of the Created Boat</param>
+    /// <param name="Column_p">Column of the Created Boat</param>
+    /// <param name="BoatType_p">Type of the Created Boat</param>
+    /// <param name="BoatStatut_p">Statut of the Created Boat</param>
+    /// <returns>No Return</returns>
     procedure InsertBoat(NoGame_p: Code[20]; Player_p: Text[50]; Line_p: Integer; Column_p: Integer; BoatType_p: Enum "Boat Type"; BoatStatut_p: Enum "Boat Statut")
     var
         NewBoat: Record "BattleShip Grid";
@@ -34,7 +44,34 @@ codeunit 50102 "Creation Grid Mgt"
             NewBoat.Insert();
         end
     end;
-
+    /// <summary>
+    /// Assign the values and the colors to the column of the Game Grid
+    /// </summary>
+    /// <param name="No">The number of the Current Game</param>
+    /// <param name="Opponent_g">The current Opponent of the Player</param>
+    /// <param name="Player_p">The current Player</param>
+    /// <param name="Line">The Line where the value need to be assign</param>
+    /// <param name="a">The value of the a column</param>
+    /// <param name="b">The value of the b column</param>
+    /// <param name="c">The value of the c column</param>
+    /// <param name="d">The value of the d column</param>
+    /// <param name="e">The value of the e column</param>
+    /// <param name="f">The value of the f column</param>
+    /// <param name="g">The value of the g column</param>
+    /// <param name="h">The value of the h column</param>
+    /// <param name="i">The value of the i column</param>
+    /// <param name="j">The value of the j column</param>
+    /// <param name="BoatColorA>The color of the a column</param>
+    /// <param name="BoatColorB">The colors of the a column</param>
+    /// <param name="BoatColorC">The colors of the a column</param>
+    /// <param name="BoatColorD">The colors of the a column</param>
+    /// <param name="BoatColorE">The colors of the a column</param>
+    /// <param name="BoatColorF">The colors of the a column</param>
+    /// <param name="BoatColorG">The colors of the a column</param>
+    /// <param name="BoatColorH">The colors of the a column</param>
+    /// <param name="BoatColorI">The colors of the a column</param>
+    /// <param name="BoatColorJ">The colors of the a column</param>
+    /// <returns>No Return</returns>
     internal procedure GameGridAssignValuesToColumn(No: Code[20]; Opponent_g: Text[50]; Line: Integer; var a: Code[1]; var b: Code[1]; var c: Code[1]; var d: Code[1]; var e: Code[1]; var f: Code[1]; var g: Code[1]; var h: Code[1]; var i: Code[1]; var j: Code[1]; var BoatColorA: Text[15]; var BoatColorB: Text[15]; var BoatColorC: Text[15]; var BoatColorD: Text[15]; var BoatColorE: Text[15]; var BoatColorF: Text[15]; var BoatColorG: Text[15]; var BoatColorH: Text[15]; var BoatColorI: Text[15]; var BoatColorJ: Text[15])
     var
         BattleGrid_l: Record "BattleShip Grid";
@@ -135,7 +172,34 @@ codeunit 50102 "Creation Grid Mgt"
                 end;
             end;
     end;
-
+    /// <summary>
+    /// Assign the values and the colors to the column of the Placement Grid
+    /// </summary>
+    /// <param name="No">The number of the Current Game</param>
+    /// <param name="Opponent_g">The current Opponent of the Player</param>
+    /// <param name="Player_p">The current Player</param>
+    /// <param name="Line">The Line where the value need to be assign</param>
+    /// <param name="a">The value of the a column</param>
+    /// <param name="b">The value of the b column</param>
+    /// <param name="c">The value of the c column</param>
+    /// <param name="d">The value of the d column</param>
+    /// <param name="e">The value of the e column</param>
+    /// <param name="f">The value of the f column</param>
+    /// <param name="g">The value of the g column</param>
+    /// <param name="h">The value of the h column</param>
+    /// <param name="i">The value of the i column</param>
+    /// <param name="j">The value of the j column</param>
+    /// <param name="BoatColorA>The color of the a column</param>
+    /// <param name="BoatColorB">The colors of the a column</param>
+    /// <param name="BoatColorC">The colors of the a column</param>
+    /// <param name="BoatColorD">The colors of the a column</param>
+    /// <param name="BoatColorE">The colors of the a column</param>
+    /// <param name="BoatColorF">The colors of the a column</param>
+    /// <param name="BoatColorG">The colors of the a column</param>
+    /// <param name="BoatColorH">The colors of the a column</param>
+    /// <param name="BoatColorI">The colors of the a column</param>
+    /// <param name="BoatColorJ">The colors of the a column</param>
+    /// <returns>No Return</returns>
     internal procedure PlacementGridAssignValuesToColumn(No: Code[20]; Player_g: Text[50]; Line: Integer; var a: Enum "Boat Type"; var b: Enum "Boat Type"; var c: Enum "Boat Type"; var d: Enum "Boat Type"; var e: Enum "Boat Type"; var f: Enum "Boat Type"; var g: Enum "Boat Type"; var h: Enum "Boat Type"; var i: Enum "Boat Type"; var j: Enum "Boat Type"; var BoatColorA: Text[15]; var BoatColorB: Text[15]; var BoatColorC: Text[15]; var BoatColorD: Text[15]; var BoatColorE: Text[15]; var BoatColorF: Text[15]; var BoatColorG: Text[15]; var BoatColorH: Text[15]; var BoatColorI: Text[15]; var BoatColorJ: Text[15])
     var
         BattleGrid_l: Record "BattleShip Grid";

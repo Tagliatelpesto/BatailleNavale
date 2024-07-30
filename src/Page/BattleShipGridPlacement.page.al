@@ -143,7 +143,12 @@ page 50105 "BattleShip Grid Placement"
         CreationGridMgt.PlacementGridAssignValuesToColumn(RecGame_g."No.", Player_g, Rec.Line, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
         RecGame_g.CalcFields("Number Boat Placed");
     end;
-
+    /// <summary>
+    /// Create the Placement Grid and Update the page without saving the Record
+    /// </summary>
+    /// <param name="RecGame_p">Record of the current BattleShip Game</param>
+    /// <param name="Player_p">The Current Player</param>
+    /// <returns>No Return</returns>
     procedure CreateGrid(RecGame_p: Record "BattleShip Game"; Player_p: Text[50])
     begin
         RecGame_g := RecGame_p;
