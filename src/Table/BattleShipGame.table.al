@@ -45,7 +45,7 @@ table 50101 "BattleShip Game"
             trigger OnValidate()
             begin
                 if ("Player 1" = "Player 2") and ("Player 1" <> '') then
-                    Error('Player 1 ne doit pas être égal à %1', "Player 2");
+                    Error('Player 1 must not be equal to %1', "Player 2");
             end;
         }
         field(6; "Player 2"; Text[50])
@@ -55,16 +55,16 @@ table 50101 "BattleShip Game"
             trigger OnValidate()
             begin
                 if ("Player 2" = "Player 1") and ("Player 2" <> '') then
-                    Error('Player 2 ne doit pas être égal à %1', "Player 1");
+                    Error('Player 2 must not be equal to %1', "Player 1");
             end;
         }
         field(7; "Winner"; Text[50])
         {
             Caption = 'Winner';
         }
-        field(8; "Looser"; Text[50])
+        field(8; Loser; Text[50])
         {
-            Caption = 'Looser';
+            Caption = 'Loser';
         }
         field(9; "Number Boat Placed"; Integer)
         {

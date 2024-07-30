@@ -4242,7 +4242,7 @@ True, "LightBlue")</BackgroundColor>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>=First(Fields!Looser.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!Loser.Value, "DataSet_Result")</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -4470,7 +4470,7 @@ True, "LightBlue")</BackgroundColor>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Looser :</Value>
+                      <Value>Loser :</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -4763,8 +4763,8 @@ NMVFpHsyaCn2w5bceec8LdGA074PmsFZXCwgHevlo9SdcCtihRZNwI/KS3NqdcKKNXnnPvRoxJ6z1WYc
         <Field Name="GameStatut">
           <DataField>GameStatut</DataField>
         </Field>
-        <Field Name="Looser">
-          <DataField>Looser</DataField>
+        <Field Name="Loser">
+          <DataField>Loser</DataField>
         </Field>
         <Field Name="No">
           <DataField>No</DataField>

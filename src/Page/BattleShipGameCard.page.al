@@ -18,19 +18,19 @@ page 50102 "BattleShip Game Card"
                     {
                         Editable = GameIsPlacement;
                         Caption = 'No.';
-                        ToolTip = 'Specifies the value of the No. field.', Comment = '%';
+                        ToolTip = 'Specifies the value of the No.Game', Comment = '%';
                     }
                     field(Comment; Rec.Comment)
                     {
                         Editable = GameIsPlacement;
                         Caption = 'Comment';
-                        ToolTip = 'Specifies the value of the Comment field.', Comment = '%';
+                        ToolTip = 'Specifies a Comment for the Game', Comment = '%';
                     }
                     field("Posting Date"; Rec."Posting Date")
                     {
                         Editable = GameIsPlacement;
                         Caption = 'Posting Date';
-                        ToolTip = 'Specifies the value of the Posting Date field.', Comment = '%';
+                        ToolTip = 'Posting Date of the Game', Comment = '%';
                     }
                 }
                 group(Player)
@@ -42,7 +42,7 @@ page 50102 "BattleShip Game Card"
                     field("Player 1"; Rec."Player 1")
                     {
                         Caption = 'Player 1';
-                        ToolTip = 'Specifies the value of the Player 1 field.', Comment = '%';
+                        ToolTip = 'Specifies the value of the Player 1', Comment = '%';
                         trigger OnValidate()
                         begin
                             GameMgt.IsOtherPlayerBeenChoose(Rec."No.", Rec."Player 1", xRec."Player 1");
@@ -52,7 +52,7 @@ page 50102 "BattleShip Game Card"
                     field("Player 2"; Rec."Player 2")
                     {
                         Caption = 'Player 2';
-                        ToolTip = 'Specifies the value of the Player 2 field.', Comment = '%';
+                        ToolTip = 'Specifies the value of the Player 2', Comment = '%';
                         trigger OnValidate()
                         begin
                             GameMgt.IsOtherPlayerBeenChoose(Rec."No.", Rec."Player 2", xRec."Player 2");
@@ -69,20 +69,20 @@ page 50102 "BattleShip Game Card"
                     {
                         Editable = false;
                         Caption = 'Winner';
-                        ToolTip = 'Specifies the value of the Winner field.', Comment = '%';
+                        ToolTip = 'Specifies the value of the Winner', Comment = '%';
                     }
-                    field(Looser; Rec.Looser)
+                    field(Loser; Rec.Loser)
                     {
                         Editable = false;
-                        Caption = 'Looser';
-                        ToolTip = 'Specifies the value of the Looser field.', Comment = '%';
+                        Caption = 'Loser';
+                        ToolTip = 'Specifies the value of the Loser', Comment = '%';
                     }
                 }
                 field(GameStatut; Rec."Game Statut")
                 {
                     Editable = false;
                     Visible = true;
-                    ToolTip = 'Specifies the value of the Game Statut field.', Comment = '%';
+                    ToolTip = 'Specifies the Game Statut', Comment = '%';
                 }
                 group(PlayerTurnGroup)
                 {
@@ -92,7 +92,7 @@ page 50102 "BattleShip Game Card"
                     field(PlayerTurn; Rec."Player Turn")
                     {
                         Editable = false;
-                        ToolTip = 'Specifies the value of the Player Turn field.', Comment = '%';
+                        ToolTip = 'Specifies the value of the Player Turn', Comment = '%';
                     }
                 }
             }
@@ -139,6 +139,13 @@ page 50102 "BattleShip Game Card"
     }
     actions
     {
+        area(Promoted)
+        {
+            actionRef(PrintGamePromoted; PrintGame)
+            {
+
+            }
+        }
         area(processing)
         {
             action(PrintGame)
@@ -147,9 +154,6 @@ page 50102 "BattleShip Game Card"
                 ToolTip = 'Print your game';
                 Image = ConfirmAndPrint;
                 Visible = GameIsFinish;
-                Promoted = true;
-                PromotedCategory = Process;
-                PromotedIsBig = true;
                 trigger OnAction()
                 var
                     RecGame: Record "BattleShip Game";
@@ -165,13 +169,13 @@ page 50102 "BattleShip Game Card"
     trigger OnPageBackgroundTaskCompleted(TaskId: Integer; Results: Dictionary of [Text, Text])
     begin
         if (TaskId = TaskIdToCheckIfNeedToRefresh_g) then
-            SetAndCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
+            SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
     end;
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     begin
         Rec.Insert(true);
-        SetAndCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
+        SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
         exit(false);
     end;
 
@@ -182,7 +186,7 @@ page 50102 "BattleShip Game Card"
 
     trigger OnAfterGetRecord()
     begin
-        SetAndCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
+        SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
     end;
 
 
@@ -198,7 +202,7 @@ page 50102 "BattleShip Game Card"
         exit(true);
     end;
     //Set the refresh of the page
-    procedure SetAndCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh()
+    procedure SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh()
     var
         TaskParameters: Dictionary of [Text, Text];
         NoPartieInText: Text[20];

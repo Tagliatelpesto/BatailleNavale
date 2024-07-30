@@ -20,7 +20,7 @@ page 50105 "BattleShip Grid Placement"
                     ShowCaption = false;
                     Width = 5;
                     Caption = 'Line';
-                    ToolTip = 'X Coordinate';
+                    ToolTip = 'Y Coordinate';
                     Editable = false;
                 }
                 field(a; a)
@@ -138,15 +138,10 @@ page 50105 "BattleShip Grid Placement"
             }
         }
     }
-    trigger OnAfterGetCurrRecord()
-    begin
-        RecGame_g.CalcFields("Number Boat Placed");
-    end;
-
     trigger OnAfterGetRecord()
     begin
         CreationGridMgt.PlacementGridAssignValuesToColumn(RecGame_g."No.", Player_g, Rec.Line, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
-
+        RecGame_g.CalcFields("Number Boat Placed");
     end;
 
     procedure CreateGrid(RecGame_p: Record "BattleShip Game"; Player_p: Text[50])

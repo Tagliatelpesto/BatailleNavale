@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="fr-FR" original="BatailleNavale">
+    <body>
+      <group id="body">
+        <trans-unit id="Table 238562794 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Game</source>
+          <target state="translated">Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comment</source>
+          <target state="translated">Commentaire</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Comment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 1021161983 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game Statut</source>
+          <target state="translated">Statut de Partie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Game Statut - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 2851472673 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Loser</source>
+          <target state="translated">Perdant</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Loser - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated">N° Partie.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <target state="translated">N° Series</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 3460042232 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number Boat Placed</source>
+          <target state="translated">Nombre de bateau placé</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Number Boat Placed - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 1862822726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player 1</source>
+          <target state="translated">Joueur 1</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Player 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 4244700171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player 2</source>
+          <target state="translated">Joueur 2</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Player 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 3107147914 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player Turn</source>
+          <target state="translated">Tour du Joueur</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Player Turn - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <target state="translated">Date de Publication</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 238562794 - Field 94590195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Winner</source>
+          <target state="translated">Gagnant</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Game - Field Winner - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2855537084 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Grid</source>
+          <target state="translated">Grille de Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Grid - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2855537084 - Field 2307791637 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Boat Statut</source>
+          <target state="translated">Statut du Bateau</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Grid - Field BoatStatut - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2855537084 - Field 2712378956 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Boat Type</source>
+          <target state="translated">Type de Bateau</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Grid - Field BoatType - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2855537084 - Field 1370214738 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Column</source>
+          <target state="translated">Colonne</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Grid - Field Column - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2855537084 - Field 1735507514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line</source>
+          <target state="translated">Ligne</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Grid - Field Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2855537084 - Field 2380131451 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Game</source>
+          <target state="translated">N°Partie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Grid - Field No.Game - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2855537084 - Field 1194756120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Player</source>
+          <target state="translated">N°Joueur</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Grid - Field No.Player - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2899622381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Battle Ship Player</source>
+          <target state="translated">Joueur de Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Player - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2899622381 - Field 1431445920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number of loses</source>
+          <target state="translated">Nombre de défaite</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Player - Field Number of loses - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2899622381 - Field 3905475884 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Number of victories</source>
+          <target state="translated">Nombre de Victoires</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Player - Field Number of victories - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2899622381 - Field 2708250016 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ID</source>
+          <target state="translated">Identifiant</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Player - Field User ID - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 400969953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Setup</source>
+          <target state="translated">Paramètre Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 400969953 - Field 1351594800 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. Series</source>
+          <target state="translated">N° Series</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Setup - Field No. Series - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 400969953 - Field 1663593181 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Primary Key</source>
+          <target state="translated">Clé Primaire</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Table BattleShip Setup - Field Primary Key - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3189742129 - Method 169939699 - NamedType 1458864712" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You can't delete the boat by the center</source>
+          <target state="translated">Vous ne pouvez pas supprimer le bateau par le centre</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Placement Grid Mgt - Method DeleteBoat - NamedType DeleteErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3189742129 - Method 3233600210 - NamedType 2204147664" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This placement is Impossible</source>
+          <target state="translated">Le placement est Impossible</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Placement Grid Mgt - Method VerifBoat - NamedType PlacementErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3189742129 - Method 3233600210 - NamedType 3265060197" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This Boat is completely placed</source>
+          <target state="translated">Ce bateau est entièrement placé</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Placement Grid Mgt - Method VerifBoat - NamedType AllPlacedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3189742129 - Method 3233600210 - NamedType 1548989585" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Placement on 2 axes impossible</source>
+          <target state="translated">Placement sur 2 axes impossible</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Placement Grid Mgt - Method VerifBoat - NamedType DoubleAxesErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3189742129 - Method 3233600210 - NamedType 869766498" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This Boat must be around boats of the same type</source>
+          <target state="translated">Ce Bateau doit être autour des bateaux de même types</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Placement Grid Mgt - Method VerifBoat - NamedType Placement2Err</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Game Card</source>
+          <target state="translated">Fiche Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="translated">Générale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 2314291591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Game Statut</source>
+          <target state="translated">Spécifie le Statut de la Partie</target>
+          <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control GameStatut - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 2851472673 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Loser</source>
+          <target state="translated">Spécifie la valeur du perdant</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Loser - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 2851472673 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Loser</source>
+          <target state="translated">Perdant</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Loser - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 94590195 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Winner</source>
+          <target state="translated">Spécifie la valeur du Gagnant</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Winner - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 94590195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Winner</source>
+          <target state="translated">Gagnant</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Winner - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 2790486453 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a Comment for the Game</source>
+          <target state="translated">Spécifie un Commentaire pour la partie</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Comment - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comment</source>
+          <target state="translated">Commentaire</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Comment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the No.Game</source>
+          <target state="translated">Spécifie la valeur du N°Partie</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated">N°Partie.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date of the Game</source>
+          <target state="translated">Date de création de la Partie</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <target state="translated">Date de Publication</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 1862822726 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Player 1</source>
+          <target state="translated">Spécifie la valeur du Joueur 1</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Player 1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 1862822726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player 1</source>
+          <target state="translated">Joueur 1</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Player 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 4244700171 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Player 2</source>
+          <target state="translated">Spécifie la valeur du Joueur 2</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Player 2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 4244700171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player 2</source>
+          <target state="translated">Joueur 2</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control Player 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 4218309274 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Player Turn</source>
+          <target state="translated">Spécifie la valeur du Tour du Joueur</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control PlayerTurn - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 276231289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Grid Game Player 1</source>
+          <target state="translated">Grille de Jeu du Joueur 1</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control GridGameP1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 3933501968 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Grid Game Player 2</source>
+          <target state="translated">Grille de Jeu du Joueur 2</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control GridGameP2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 2799756860 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Grid Placement Player 1</source>
+          <target state="translated">Grille de Placement du Joueur 1</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control GridPlacementP1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Control 3437453477 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Grid Placement Player 2</source>
+          <target state="translated">Grille de Placement du Joueur 2</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Control GridPlacementP2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Action 3274950889 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print your game</source>
+          <target state="translated">Imprimez votre partie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Action PrintGame - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1579089710 - Action 3274950889 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PrintGame</source>
+          <target state="translated">Impr.Partie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game Card - Action PrintGame - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Game</source>
+          <target state="translated">Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game,BattleShip</source>
+          <target state="translated">Partie de Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 2790486453 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies a Comment for the Game</source>
+          <target state="translated">Spécifie un commentaire pour la Partie</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Comment - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 2790486453 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Comment</source>
+          <target state="translated">Commentaire</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Comment - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 2314291591 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Game Statut</source>
+          <target state="needs-adaptation">Spécifie le Statut de la Partie</target>
+          <note from="XLIFF Sync" annotates="general" priority="1">Source text has changed. Please review the translation.</note>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control GameStatut - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 2314291591 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Statut of the game</source>
+          <target state="translated">Statut de la Partie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control GameStatut - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 2851472673 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Loser</source>
+          <target state="translated">Spécifie la valeur du perdant</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Loser - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 2851472673 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Loser</source>
+          <target state="translated">Perdant</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Loser - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 4200184881 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the No.Game</source>
+          <target state="translated">Spécifie le N° de Partie</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control No. - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 4200184881 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No.</source>
+          <target state="translated">N°Partie.</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 1862822726 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Player 1</source>
+          <target state="translated">Spécifie la valeur du joueur 1</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Player 1 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 1862822726 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player 1</source>
+          <target state="translated">Joueur 1</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Player 1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 4244700171 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Player 2</source>
+          <target state="translated">Spécifie la valeur du joueur 2</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Player 2 - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 4244700171 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Player 2</source>
+          <target state="translated">Joueur 2</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Player 2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 3710982960 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date of the Game</source>
+          <target state="translated">Date de création de la Partie</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Posting Date - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <target state="translated">Date de Publication</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Posting Date - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 94590195 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the value of the Winner</source>
+          <target state="translated">Spécifie la valeur du Gagnant</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Winner - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2573397000 - Control 94590195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Winner</source>
+          <target state="translated">Gagnant</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Game List - Control Winner - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Grid</source>
+          <target state="translated">Grille de Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 2871316547 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control a - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 2871316547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A</source>
+          <target state="translated">A</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control a - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 489439102 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control b - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 489439102 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>B</source>
+          <target state="translated">B</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control b - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 4146709781 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control c - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 4146709781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>C</source>
+          <target state="translated">C</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control c - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 958226696 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control d - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 958226696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>D</source>
+          <target state="translated">D</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control d - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 320530079 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control e - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 320530079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E</source>
+          <target state="translated">E</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control e - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 2233619930 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control f - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 2233619930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>F</source>
+          <target state="translated">F</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control f - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 1595923313 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control g - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 1595923313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G</source>
+          <target state="translated">G</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control g - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 20651508 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control h - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 20651508 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>H</source>
+          <target state="translated">H</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control h - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 3677922187 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control i - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 3677922187 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>I</source>
+          <target state="translated">I</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control i - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 1296044742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control j - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 1296044742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>J</source>
+          <target state="translated">J</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control j - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3806665386 - Control 1735507514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Y Coordinate</source>
+          <target state="translated">Coordonnée Y</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Game - Control Line - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Grid</source>
+          <target state="translated">Grille de Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 2871316547 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control a - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 2871316547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>A</source>
+          <target state="translated">A</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control a - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 489439102 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control b - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 489439102 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>B</source>
+          <target state="translated">B</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control b - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 4146709781 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control c - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 4146709781 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>C</source>
+          <target state="translated">C</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control c - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 958226696 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control d - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 958226696 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>D</source>
+          <target state="translated">D</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control d - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 320530079 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control e - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 320530079 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>E</source>
+          <target state="translated">E</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control e - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 2233619930 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control f - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 2233619930 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>F</source>
+          <target state="translated">F</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control f - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 1595923313 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control g - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 1595923313 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>G</source>
+          <target state="translated">G</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control g - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 20651508 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control h - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 20651508 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>H</source>
+          <target state="translated">H</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control h - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 3677922187 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control i - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 3677922187 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>I</source>
+          <target state="translated">I</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control i - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 1296044742 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>X Coordinate</source>
+          <target state="translated">Coordonnée X</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control j - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 1296044742 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>J</source>
+          <target state="translated">J</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control j - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 1735507514 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Y Coordinate</source>
+          <target state="translated">Coordonnée Y</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control Line - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 2483026315 - Control 1735507514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line</source>
+          <target state="translated">Ligne</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control Line - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1815249539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Player</source>
+          <target state="translated">Joueur de Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player List - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1815249539 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip,Player</source>
+          <target state="translated">Bataille, Navale, Bataille Navale, Joueur</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player List - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 1815249539 - Control 1431445920 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Number of loses the Player have</source>
+          <target state="translated">Spécifie le nombre de Défaites que le Joueur a</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player List - Control Number of loses - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1815249539 - Control 3905475884 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Number of victories the Player have</source>
+          <target state="translated">Spécifie le nombre de victoires que le Joueur a</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player List - Control Number of victories - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 1815249539 - Control 2708250016 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Player User Id</source>
+          <target state="translated">Spécifie l'identifiant du Joueur</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player List - Control User ID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 400969953 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShip Setup</source>
+          <target state="translated">Paramètre Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Setup - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 400969953 - Property 3863440606" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Setup,BattleShip,Game</source>
+          <target state="translated">Paramètre,Bataille, Navale, Bataille Navale, Partie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Setup - Property AdditionalSearchTerms</note>
+        </trans-unit>
+        <trans-unit id="Page 400969953 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="translated">Générale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Setup - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 400969953 - Control 1351594800 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the No. Series for the BattleShip Game</source>
+          <target state="translated">Spécifie le N° de Série de la Partie de Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Setup - Control No. Series - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4113539433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShipPlayer Card</source>
+          <target state="translated">Fiche Joueur de la Bataille Navale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4113539433 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <target state="translated">Générale</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4113539433 - Control 1431445920 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Number of loses the Player have</source>
+          <target state="translated">Spécifie le nombre de défaites que le Joueur a</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Control Number of loses - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4113539433 - Control 3905475884 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Number of victories the Player have</source>
+          <target state="translated">Spécifie le nombre de victoires que le Joueur a</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Control Number of victories - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4113539433 - Control 2138558048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Player User Id</source>
+          <target state="translated">Spécifie l'identifiant du Joueur</target>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Control UserID - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Report 1852210746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Resume Print BattleShip Game</source>
+          <target state="translated">Impr. Résumer de la Partie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Resume Print BattleShip Game - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3230171997 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Statut - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3230171997 - EnumValue 1091794855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Hit</source>
+          <target state="translated">Touché</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Statut - EnumValue Hit - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3230171997 - EnumValue 1227876768 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Miss</source>
+          <target state="translated">Loupé</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Statut - EnumValue Miss - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 3230171997 - EnumValue 604470185 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sinking</source>
+          <target state="translated">Coulé</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Statut - EnumValue Sinking - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4063187524 - EnumValue 1371923692 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source> </source>
+          <target state="translated"> </target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Type - EnumValue   - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4063187524 - EnumValue 954179868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Battleship (4 Cases)</source>
+          <target state="translated">Croiseur (4 Cases)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Type - EnumValue Battleship - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4063187524 - EnumValue 4093983712 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Carrier (5 Cases)</source>
+          <target state="translated">Porte Avion (5 Cases)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Type - EnumValue Carrier - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4063187524 - EnumValue 2140220551 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Destroyer (3 Cases)</source>
+          <target state="translated">Contre-Torpilleur (3 Cases)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Type - EnumValue Destroyer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4063187524 - EnumValue 693752872 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PatrolBoat (2 Cases)</source>
+          <target state="translated">Patrouille (2 Cases)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Type - EnumValue PatrolBoat - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 4063187524 - EnumValue 2813759748 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Submarine (3 Cases)</source>
+          <target state="translated">Sous-Marrin (3 Cases)</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Boat Type - EnumValue Submarine - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1021161983 - EnumValue 2667510389 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Finish</source>
+          <target state="translated">Finis</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Game Statut - EnumValue Finish - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1021161983 - EnumValue 3365030986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Game</source>
+          <target state="translated">N°Partie</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Game Statut - EnumValue Game - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Enum 1021161983 - EnumValue 1536621291 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Placement</source>
+          <target state="translated">Placement</target>
+          <note from="Developer" annotates="general" priority="2"/>
+          <note from="Xliff Generator" annotates="general" priority="3">Enum Game Statut - EnumValue Placement - Property Caption</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

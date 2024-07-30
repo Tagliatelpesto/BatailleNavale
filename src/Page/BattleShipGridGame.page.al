@@ -19,6 +19,7 @@ page 50104 "BattleShip Grid Game"
                 {
                     ShowCaption = false;
                     Width = 1;
+                    ToolTip = 'Y Coordinate';
                 }
                 field(a; a)
                 {

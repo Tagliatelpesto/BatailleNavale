@@ -16,7 +16,7 @@ report 50100 "Resume Print BattleShip Game"
             column(GameStatut; "Game Statut")
             {
             }
-            column(Looser; Looser)
+            column(Loser; Loser)
             {
             }
             column(No; "No.")

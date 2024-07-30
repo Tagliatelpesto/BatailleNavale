@@ -3,7 +3,7 @@ codeunit 50104 "Game Grid Mgt"
     procedure HitOrMiss(var RecGame_g: Record "BattleShip Game"; Player_g: Text[50]; Opponent_g: Text[50]; Line_p: Integer; Column_p: Integer; var a: Code[1]; var b: Code[1]; var c: Code[1]; var d: Code[1]; var e: Code[1]; var f: Code[1]; var g: Code[1]; var h: Code[1]; var i: Code[1]; var j: Code[1]; var BoatColorA: Text[15]; var BoatColorB: Text[15]; var BoatColorC: Text[15]; var BoatColorD: Text[15]; var BoatColorE: Text[15]; var BoatColorF: Text[15]; var BoatColorG: Text[15]; var BoatColorH: Text[15]; var BoatColorI: Text[15]; var BoatColorJ: Text[15])
     var
         RecHitOrMiss_l: Record "BattleShip Grid";
-        GridMgt: CodeUnit "Creation Grid Mgt";
+        CreationGridMgt: CodeUnit "Creation Grid Mgt";
         BoatStatut_l: Code[1];
         RecBoatType_l: Enum "Boat Type";
         BoatColor_l: Text[15];
@@ -19,10 +19,10 @@ codeunit 50104 "Game Grid Mgt"
             BoatStatut_l := 'O';
             BoatColor_l := 'Subordinate';
             //Boat needs to be created to be set to miss and be seen in the game grid.
-            GridMgt.InsertBoat(RecGame_g."No.", Opponent_g, Line_p, Column_p, "Boat Type"::" ", "Boat Statut"::Miss);
+            CreationGridMgt.InsertBoat(RecGame_g."No.", Opponent_g, Line_p, Column_p, "Boat Type"::" ", "Boat Statut"::Miss);
         end;
 
-        GridMgt.GameGridAssignValuesToColumn(RecGame_g."No.", Opponent_g, Line_p, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
+        CreationGridMgt.GameGridAssignValuesToColumn(RecGame_g."No.", Opponent_g, Line_p, a, b, c, d, e, f, g, h, i, j, BoatColorA, BoatColorB, BoatColorC, BoatColorD, BoatColorE, BoatColorF, BoatColorG, BoatColorH, BoatColorI, BoatColorJ);
         ChangePlayerTurn(RecGame_g, Player_g, Opponent_g);
     end;
 
@@ -66,7 +66,7 @@ codeunit 50104 "Game Grid Mgt"
             if (NumberOfBoatSinking >= 17) then begin
                 RecGame_g."Game Statut" := "Game Statut"::Finish;
                 RecGame_g.Winner := Player_g;
-                RecGame_g.Looser := Opponent_g;
+                RecGame_g.Loser := Opponent_g;
                 RecGame_g.Modify();
             end
         end;

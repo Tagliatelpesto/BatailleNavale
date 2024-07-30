@@ -72,7 +72,7 @@ codeunit 50105 "Placement Grid Mgt"
         PlacementErr: Label 'This placement is Impossible';
         AllPlacedErr: Label 'This Boat is completely placed';
         DoubleAxesErr: Label 'Placement on 2 axes impossible';
-        Placement2Err: Label 'Placement need to be around the other same Boat Type';
+        Placement2Err: Label 'This Boat must be around boats of the same type';
     begin
         if NewBoatToInsert.Get(BattleShipGame_l."No.", Player, Line_p, Column_p) then;
 

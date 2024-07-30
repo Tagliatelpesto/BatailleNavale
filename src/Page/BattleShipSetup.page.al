@@ -5,7 +5,7 @@ page 50103 "BattleShip Setup"
     PageType = Card;
     SourceTable = "BattleShip Setup";
     UsageCategory = Administration;
-    AdditionalSearchTerms = 'CCC';
+    AdditionalSearchTerms = 'Setup,BattleShip,Game';
     layout
     {
         area(Content)
@@ -16,7 +16,7 @@ page 50103 "BattleShip Setup"
 
                 field("No. Series"; Rec."No. Series")
                 {
-                    ToolTip = 'Specifies the value of the No. Series field.', Comment = '%';
+                    ToolTip = 'Specifies the No. Series for the BattleShip Game', Comment = '%';
                 }
             }
         }

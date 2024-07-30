@@ -16,11 +16,11 @@ table 50102 "BattleShip Player"
             FieldClass = FlowField;
             CalcFormula = count("BattleShip Game" where(Winner = field("User ID")));
         }
-        field(4; "Number of looses"; Integer)
+        field(4; "Number of loses"; Integer)
         {
-            Caption = 'Number of looses';
+            Caption = 'Number of loses';
             FieldClass = FlowField;
-            CalcFormula = count("BattleShip Game" where(Looser = field("User ID")));
+            CalcFormula = count("BattleShip Game" where(Loser = field("User ID")));
         }
     }
     keys
