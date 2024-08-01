@@ -28,14 +28,17 @@ codeunit 50103 "Game Mgt"
     /// <param name="No">The No. of the BattleShip Game</param>
     /// <param name="NoSeriesCode">The No. Series code of the BattleShip Game</param>
     /// <returns>No Return</returns>
-    procedure TestNoSeriesDate(No: Code[20]; NoSeriesCode: Code[20])
+    procedure TestNoSeriesDate(No: Code[20]; NoSeriesCode: Code[20]): Boolean
     var
         GlobalNoSeries: Record "No. Series";
     begin
         if (No <> '') and (NoSeriesCode <> '') then begin
             GlobalNoSeries.Get(NoSeriesCode);
-            if GlobalNoSeries."Date Order" then
-                Error('No valid Date');
+            if GlobalNoSeries."Date Order" then begin
+                Message('No valid Date');
+                exit(false);
+            end;
+            exit(true);
         end;
     end;
     /// <summary>

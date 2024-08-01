@@ -10,7 +10,7 @@ codeunit 50102 "Creation Grid Mgt"
         k: Integer;
     begin
         if not BattleShipGridRecord.IsTemporary() then
-            Error('%1 must be temporary', BattleShipGridRecord.TableCaption);
+            Message('%1 must be temporary', BattleShipGridRecord.TableCaption);
         BattleShipGridRecord.Reset();
         BattleShipGridRecord.DeleteAll();
         for k := 1 to 10 do begin
@@ -33,16 +33,19 @@ codeunit 50102 "Creation Grid Mgt"
     var
         NewBoat: Record "BattleShip Grid";
     begin
-        if not (NewBoat.Get(NoGame_p, Player_p, Line_p, Column_p)) then begin
-            NewBoat.Init();
-            NewBoat.BoatType := BoatType_p;
-            NewBoat.Column := Column_p;
-            NewBoat.Line := Line_p;
-            NewBoat."No.Game" := NoGame_p;
-            NewBoat."No.Player" := Player_p;
-            NewBoat.BoatStatut := BoatStatut_p;
-            NewBoat.Insert();
-        end
+        if (Player_p <> '') then
+            if not (NewBoat.Get(NoGame_p, Player_p, Line_p, Column_p)) then begin
+                NewBoat.Init();
+                NewBoat.BoatType := BoatType_p;
+                NewBoat.Column := Column_p;
+                NewBoat.Line := Line_p;
+                NewBoat."No.Game" := NoGame_p;
+                NewBoat."No.Player" := Player_p;
+                NewBoat.BoatStatut := BoatStatut_p;
+                NewBoat.Insert();
+            end
+            else
+                Message('Pas de joueur enregistrer');
     end;
     /// <summary>
     /// Assign the values and the colors to the column of the Game Grid
@@ -61,7 +64,7 @@ codeunit 50102 "Creation Grid Mgt"
     /// <param name="h">The value of the h column</param>
     /// <param name="i">The value of the i column</param>
     /// <param name="j">The value of the j column</param>
-    /// <param name="BoatColorA>The color of the a column</param>
+    /// <param name="BoatColorA">The color of the a column</param>
     /// <param name="BoatColorB">The colors of the a column</param>
     /// <param name="BoatColorC">The colors of the a column</param>
     /// <param name="BoatColorD">The colors of the a column</param>
@@ -189,7 +192,7 @@ codeunit 50102 "Creation Grid Mgt"
     /// <param name="h">The value of the h column</param>
     /// <param name="i">The value of the i column</param>
     /// <param name="j">The value of the j column</param>
-    /// <param name="BoatColorA>The color of the a column</param>
+    /// <param name="BoatColorA">The color of the a column</param>
     /// <param name="BoatColorB">The colors of the a column</param>
     /// <param name="BoatColorC">The colors of the a column</param>
     /// <param name="BoatColorD">The colors of the a column</param>

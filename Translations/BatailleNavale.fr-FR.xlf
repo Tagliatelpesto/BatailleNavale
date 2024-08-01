@@ -871,7 +871,7 @@
         </trans-unit>
         <trans-unit id="Enum 1021161983 - EnumValue 3365030986 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Game</source>
-          <target state="translated">N°Partie</target>
+          <target state="translated">En Jeu</target>
           <note from="Developer" annotates="general" priority="2"/>
           <note from="Xliff Generator" annotates="general" priority="3">Enum Game Statut - EnumValue Game - Property Caption</note>
         </trans-unit>

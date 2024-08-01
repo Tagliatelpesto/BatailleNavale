@@ -17,9 +17,8 @@ codeunit 50100 SleepToRefreshGame
             Error('Could not parse parameter Current Player Turn');
 
         NoPartieCode := CopyStr(NoPartieText, 1, MAXSTRLEN(NoPartieCode));
-        while RecordGame.Get(NoPartieCode) and (RecordGame."Player Turn" = CurrPlayerTurn) and (RecordGame."Game Statut" = "Game Statut"::Placement) do
+        while RecordGame.Get(NoPartieCode) and (RecordGame."Player Turn" = CurrPlayerTurn) and (RecordGame."Game Statut" = "Game Statut"::Game) do
             Sleep(100);
-
         Page.SetBackgroundTaskResult(Result);
     end;
 }

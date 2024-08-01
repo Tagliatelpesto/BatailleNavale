@@ -30,8 +30,8 @@ table 50101 "BattleShip Game"
             Caption = 'Posting Date';
             trigger OnValidate()
             begin
-                TestField("Posting Date");
-                GameMgt.TestNoSeriesDate("No.", "No. Series");
+                if (not GameMgt.TestNoSeriesDate("No.", "No. Series")) or ("Posting Date" = 0D) then
+                    Rec.Validate("Posting Date", xRec."Posting Date");
             end;
         }
         field(4; "Comment"; Text[250])
@@ -92,7 +92,6 @@ table 50101 "BattleShip Game"
     trigger OnInsert()
     begin
         GameMgt.InitInsert(Rec, xRec);
-        GameMgt.TestNoSeriesDate(Rec."No.", Rec."No. Series");
     end;
 
     trigger OnDelete()

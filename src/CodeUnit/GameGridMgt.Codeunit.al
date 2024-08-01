@@ -18,7 +18,7 @@ codeunit 50104 "Game Grid Mgt"
     /// <param name="h">The value of the h column</param>
     /// <param name="i">The value of the i column</param>
     /// <param name="j">The value of the j column</param>
-    /// <param name="BoatColorA>The color of the a column</param>
+    /// <param name="BoatColorA">The color of the a column</param>
     /// <param name="BoatColorB">The colors of the a column</param>
     /// <param name="BoatColorC">The colors of the a column</param>
     /// <param name="BoatColorD">The colors of the a column</param>
@@ -111,10 +111,10 @@ codeunit 50104 "Game Grid Mgt"
             RecHitOrMiss.SetRange(BoatStatut, "Boat Statut"::Sinking);
             NumberOfBoatSinking := RecHitOrMiss.Count();
             if (NumberOfBoatSinking >= 17) then begin
-                RecGame_g."Game Statut" := "Game Statut"::Finish;
+                RecGame_g.Validate("Game Statut", "Game Statut"::Finish);
                 RecGame_g.Winner := Player_g;
                 RecGame_g.Loser := Opponent_g;
-                RecGame_g.Modify();
+                RecGame_g.Modify(true);
             end
         end;
     end;
@@ -131,6 +131,6 @@ codeunit 50104 "Game Grid Mgt"
             RecGame_g."Player Turn" := Opponent_g
         else
             RecGame_g."Player Turn" := Player_g;
-        RecGame_g.Modify();
+        RecGame_g.Modify(true);
     end;
 }

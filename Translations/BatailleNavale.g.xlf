@@ -593,6 +593,31 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Grid Placement - Control Line - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 4098520529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BattleShipPlayer Card</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player Card - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098520529 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>General</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player Card - Control General - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 4098520529 - Control 1431445920 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Number of loses the Player have</source>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player Card - Control Number of loses - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098520529 - Control 3905475884 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Number of victories the Player have</source>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player Card - Control Number of victories - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="Page 4098520529 - Control 2138558048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Specifies the Player User Id</source>
+          <note from="Developer" annotates="general" priority="2">%</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Player Card - Control UserID - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="Page 1815249539 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>BattleShip Player</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -637,31 +662,6 @@
           <source>Specifies the No. Series for the BattleShip Game</source>
           <note from="Developer" annotates="general" priority="2">%</note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BattleShip Setup - Control No. Series - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 4113539433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>BattleShipPlayer Card</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4113539433 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>General</source>
-          <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Control General - Property Caption</note>
-        </trans-unit>
-        <trans-unit id="Page 4113539433 - Control 1431445920 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Number of loses the Player have</source>
-          <note from="Developer" annotates="general" priority="2">%</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Control Number of loses - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 4113539433 - Control 3905475884 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Number of victories the Player have</source>
-          <note from="Developer" annotates="general" priority="2">%</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Control Number of victories - Property ToolTip</note>
-        </trans-unit>
-        <trans-unit id="Page 4113539433 - Control 2138558048 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Specifies the Player User Id</source>
-          <note from="Developer" annotates="general" priority="2">%</note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page BattleShipPlayer Card - Control UserID - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="Report 1852210746 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Resume Print BattleShip Game</source>

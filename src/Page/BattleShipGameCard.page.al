@@ -46,7 +46,7 @@ page 50102 "BattleShip Game Card"
                         trigger OnValidate()
                         begin
                             GameMgt.IsOtherPlayerBeenChoose(Rec."No.", Rec."Player 1", xRec."Player 1");
-                            SetVisibleEditableVariable()
+                            CurrPage.Update(true);
                         end;
                     }
                     field("Player 2"; Rec."Player 2")
@@ -56,7 +56,7 @@ page 50102 "BattleShip Game Card"
                         trigger OnValidate()
                         begin
                             GameMgt.IsOtherPlayerBeenChoose(Rec."No.", Rec."Player 2", xRec."Player 2");
-                            SetVisibleEditableVariable()
+                            CurrPage.Update(true);
                         end;
                     }
                 }
@@ -83,6 +83,10 @@ page 50102 "BattleShip Game Card"
                     Editable = false;
                     Visible = true;
                     ToolTip = 'Specifies the Game Statut', Comment = '%';
+                    trigger OnValidate()
+                    begin
+                        SetVisibleEditableVariable();
+                    end;
                 }
                 group(PlayerTurnGroup)
                 {
@@ -168,14 +172,20 @@ page 50102 "BattleShip Game Card"
     }
     trigger OnPageBackgroundTaskCompleted(TaskId: Integer; Results: Dictionary of [Text, Text])
     begin
-        if (TaskId = TaskIdToCheckIfNeedToRefresh_g) then
-            SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
+        SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
     end;
+
+    trigger OnPageBackgroundTaskError(TaskId: Integer; ErrorCode: Text; ErrorText: Text; ErrorCallStack: Text; var IsHandled: Boolean)
+    begin
+        TaskId := TaskId;
+    end;
+
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     begin
         Rec.Insert(true);
-        SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
+        CurrPage.Update();
+        // SetCreateGridAndEnqueueBackTaskToCheckIfNeedToRefresh();
         exit(false);
     end;
 
@@ -212,24 +222,25 @@ page 50102 "BattleShip Game Card"
         TaskParameters: Dictionary of [Text, Text];
         NoPartieInText: Text[20];
     begin
-        SetVisibleEditableVariable();
         if not CreateGrid() then
             exit;
+        SetVisibleEditableVariable();
         NoPartieInText := Format(Rec."No.");
         TaskParameters.Add('No.', NoPartieInText);
 
         case true of
             Rec."Game Statut" = "Game Statut"::Placement:
-                CurrPage.EnqueueBackgroundTask(TaskIdToCheckIfNeedToRefresh_g, codeunit::SleepToRefreshPlacement, TaskParameters, 600000, PageBackgroundTaskErrorLevel::Warning);
+                CurrPage.EnqueueBackgroundTask(TaskIdToCheckIfNeedToRefresh_g, codeunit::SleepToRefreshPlacement, TaskParameters, 600000, PageBackgroundTaskErrorLevel::Error);
             Rec."Game Statut" = "Game Statut"::Game:
                 begin
                     TaskParameters.Add('CurrPlayerTurn', Rec."Player Turn");
-                    CurrPage.EnqueueBackgroundTask(TaskIdToCheckIfNeedToRefresh_g, codeunit::SleepToRefreshGame, TaskParameters, 600000, PageBackgroundTaskErrorLevel::Warning);
+                    CurrPage.EnqueueBackgroundTask(TaskIdToCheckIfNeedToRefresh_g, codeunit::SleepToRefreshGame, TaskParameters, 600000, PageBackgroundTaskErrorLevel::Error);
                 end;
         end;
     end;
     /// <summary>
     ///  Set the Visible and Editable variable of the Grid
+
     /// </summary>
     procedure SetVisibleEditableVariable()
     begin

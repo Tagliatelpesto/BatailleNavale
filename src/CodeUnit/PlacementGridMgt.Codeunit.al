@@ -18,9 +18,9 @@ codeunit 50105 "Placement Grid Mgt"
             DeleteBoat(BattleShipGame_l, Player, BattleShipGrid_l.Line, Column_p, BoatType_p);
         BattleShipGame_l.CalcFields("Number Boat Placed");
         if (BattleShipGame_l."Number Boat Placed" >= 34) then begin
-            BattleShipGame_l."Game Statut" := "Game Statut"::Game;
+            BattleShipGame_l.Validate("Game Statut", "Game Statut"::Game);
             BattleShipGame_l."Player Turn" := BattleShipGame_l."Player 1";
-            BattleShipGame_l.Modify();
+            BattleShipGame_l.Modify(true);
         end
     end;
     /// <summary>
@@ -37,7 +37,7 @@ codeunit 50105 "Placement Grid Mgt"
     begin
         if (BoatToModify_l.Get(BattleShipGame_l."No.", Player, Line_p, Column_p)) then begin
             BoatToModify_l.BoatType := BoatType_p;
-            BoatToModify_l.Modify();
+            BoatToModify_l.Modify(true);
         end
         else
             CreationGridMgt.InsertBoat(BattleShipGame_l."No.", Player, Line_p, Column_p, BoatType_p, BoatStatut_p);
